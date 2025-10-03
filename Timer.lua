@@ -1,9 +1,8 @@
+-- Class initiation
 local Timer = {}
 Timer.__index = Timer
 
-local ServerScriptService = game:GetService("ServerScriptService")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local TweenService = game:GetService("TweenService")
+-- Services
 local RunService = game:GetService("RunService")
 
 type TimerStatus = "Stasis" | "Counting" | "Paused" | "Dead"
@@ -114,5 +113,6 @@ function Timer:Cancel()
 	end
 	self = nil
 end
+
 
 return Timer
